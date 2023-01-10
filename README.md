@@ -1,5 +1,3 @@
-# QuizApp
-
 This is a quiz app I'm building as part of the course work for The Vue3 Bootcamp: (https://www.udemy.com/course/the-vue-3-bootcamp-the-complete-developer-guide/)
 
 ## Recommended IDE Setup
