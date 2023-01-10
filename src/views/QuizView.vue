@@ -14,7 +14,7 @@
   const currentQuestionIndex = ref(0)
 
   // Watch allows us to listen to specific values in our state for changes. 
-  
+
   // const questionStatus = ref(`${currentQuestionIndex.value}/${quiz.questions.length}`)
 
   // watch(() => currentQuestionIndex.value, () => {
@@ -31,15 +31,18 @@
   // Even more efficient is writing the above code in one line, turning 5 lines of code into 1.
   const questionStatus = computed(() => `${currentQuestionIndex.value}/${quiz.questions.length}`)
 
+  const barPercentage = computed(() => `${currentQuestionIndex.value}/${quiz.questions.length * 100}%`)
 </script>
 
 <template>
   <div>
     <QuizHeader  
       :questionStatus="questionStatus"
+      :barPercentage="barPercentage"
     />
     <div>
       <Question :question="quiz.questions[currentQuestionIndex]"/>
     </div>
+    <button @click="currentQuestionIndex++">Next Question</button>
   </div>
 </template>
