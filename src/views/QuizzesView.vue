@@ -25,6 +25,8 @@
   }
   const afterEnter = () => {
     console.log("AFTER ENTER")
+    //Not necessary but is included to demonstrate the available 
+    //options for the lifecycle hook of the transition
   }
 </script>
 
